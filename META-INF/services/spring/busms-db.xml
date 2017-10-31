@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">	
+    <bean id="areaManager" class="com.sihuatech.basicdata.area.manage.AreaManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>	
+	<bean id="com.sihuatech.interfaceConfigManager" class="com.sihuatech.interfaceall.interfaceconfig.manager.InterfaceConfigManager">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+    </bean>	
+   <bean id="checkManage" class="com.sihuatech.interfaceall.check.manage.CheckManage">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   <bean id="com.sihuatech.InterfaceInfoManager" class="com.sihuatech.interfaceinfo.manager.InterfaceInfoManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+    <bean id="com.sihuatech.DataRecordStatusManager" class="com.sihuatech.datastatus.manager.DataRecordStatusManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   <bean id="com.sihuatech.DataRecordHistoryManager" class="com.sihuatech.datarecord.manager.DataRecordHistoryManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+</beans>

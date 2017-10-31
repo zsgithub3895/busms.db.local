@@ -1,0 +1,1 @@
+alter table T_INTERFACE add column delayThreshold INT COMMENT "延迟阈值" default 0;

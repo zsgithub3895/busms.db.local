@@ -1,0 +1,1 @@
+ALTER TABLE T_INTERFACE change strategyCode strategyCode VARCHAR(100);
